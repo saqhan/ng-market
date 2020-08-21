@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ng-market-place"
+    }
+  },
+  "defaultProject": "ng-market-place",
+  "cli": {
+    "analytics": "bb169f1f-6cc4-45a1-8c34-b63fe472e158"
+  }
 }
