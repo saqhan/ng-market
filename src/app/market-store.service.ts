@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { fakeAsync } from '@angular/core/testing';
 import {
   header,
   forOffer,
@@ -26,6 +27,7 @@ export class MarketStoreService {
 
   public numberHeader = header.numberHeader;
 
+
   public forOffer = forOffer;
 
   public offerTitleText = offerTitleText;
@@ -51,4 +53,37 @@ export class MarketStoreService {
   public homeText = homeText;
 
   public homeSubText = homeSubText;
+
+
+
+  //  сайхан
+  //
+  public getTopBar() {
+    return header.topBar;
+  }
+  //
+  public getBodyHeader() {
+    return header.body;
+  }
+
+  //
+  getLoginUser() {
+    return true;
+  }
+
+  //
+  getNavBar() {
+    return header.navBar;
+  }
+
+  //
+  getSelectShops() {
+    return header.selectShops;
+  }
+
+  //
+  getLeftMenuCatalog() {
+    return header.leftMenuCatalog;
+  }
+
 }

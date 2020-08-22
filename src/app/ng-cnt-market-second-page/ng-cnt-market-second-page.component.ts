@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {MarketStoreService} from "../market-store.service";
 
 @Component({
   selector: 'app-ng-cnt-market-second-page',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NgCntMarketSecondPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private marketStore: MarketStoreService) {}
 
   ngOnInit(): void {
+  }
+
+  public getLogo() {
+    return this.marketStore.logo;
   }
 
 }

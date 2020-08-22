@@ -1,0 +1,26 @@
+<div *ngIf="this.firstPage" >
+  <s-cnt-market-header-base
+    [logo]="getLogo()"
+    [number]="getNumberHeader()"
+  ></s-cnt-market-header-base>
+</div>
+<div *ngIf="!this.firstPage">
+  <div class="header-wrapper">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <div class="header-wrapper-child">
+            <s-cnt-market-top-bar [topBar]="getTopBar()"></s-cnt-market-top-bar>
+            <s-cnt-market-header-body [body]="getBodyHeader()"></s-cnt-market-header-body>
+            <s-cnt-market-header-nav
+              [login]='getLoginUser()'
+              [navBar]="getNavBar()"
+              [selectShops]="getSelectShops()"
+              [leftMenuCatalogArr]="getLeftMenuCatalog()"></s-cnt-market-header-nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
