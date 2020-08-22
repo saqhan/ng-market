@@ -10,3 +10,9 @@ if (environment.production) {
 
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.error(err));
+
+// stencil js - source
+import {defineCustomElements} from 'stencil-market/loader';
+
+// stencil js - source
+defineCustomElements(window);
