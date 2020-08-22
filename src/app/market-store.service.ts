@@ -13,8 +13,8 @@ import {
   forApp, forSelection,
   homePageImage,
   homeText,
-  homeSubText
-
+  homeSubText,
+  footerData
 } from './mock';
 
 @Injectable({
@@ -58,6 +58,28 @@ export class MarketStoreService {
 
   //  сайхан
   //
+
+  public getLogoFooter() {
+    return footerData.logoFooter;
+  }
+
+  //
+  public getMenuItemFooter() {
+    return footerData.footerMenu;
+  }
+
+  //
+  public getFooterContactColumn() {
+    return footerData.footerContactColumn;
+  }
+
+  getFooterCopyrightRow() {
+    return footerData.footerCopyrightRow;
+  }
+  getFooterLinksPolitics() {
+    return footerData.footerLinksPolitics;
+  }
+
   public getTopBar() {
     return header.topBar;
   }
