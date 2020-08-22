@@ -11,6 +11,7 @@ export class NgCntMarketHeaderComponent implements OnInit {
 
   ngOnInit(): void {}
 
+  //
   @Input() firstPage: boolean;
 
 

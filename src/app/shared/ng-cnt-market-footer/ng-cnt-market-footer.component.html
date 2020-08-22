@@ -1,1 +1,29 @@
-<p>ng-cnt-market-footer works!</p>
+<footer>
+  <div class="upFooter">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-3">
+          <div
+            class="logo"
+            [ngStyle]="{ 'background-image': 'url(' + getLogoFooter() + ')' }"
+          ></div>
+        </div>
+        <div *ngFor="let item of getMenuItemFooter()" >
+          <div class=" col-12 col-sm-6 col-md-4 col-lg-3">
+            <s-cnt-market-up-footer [footerMenu]="getMenuItemFooter()" ></s-cnt-market-up-footer>
+          </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-4 col-lg-3">
+          <s-cnt-market-up-footer-form [footerContactColumn]="getFooterContactColumn()"></s-cnt-market-up-footer-form>
+        </div>
+      </div>
+    </div>
+    <div class="line"></div>
+  </div>
+  <s-cnt-market-down-footer
+    [footerCopyrightRow]="getFooterCopyrightRow()"
+  ></s-cnt-market-down-footer>
+  <s-cnt-market-footer-info
+    [footerLinksPolitics]="getFooterLinksPolitics()"
+  ></s-cnt-market-footer-info>
+</footer>
