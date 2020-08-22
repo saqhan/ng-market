@@ -1,5 +1,5 @@
-<app-ng-cnt-market-header></app-ng-cnt-market-header>
-  <main>
+<app-ng-cnt-market-header [firstPage]="true" ></app-ng-cnt-market-header>
+<main>
   <s-cnt-market-selection
     [forSelection]="getForSelection()"
     [homePageImage]="getHomePageImge()"
@@ -34,4 +34,5 @@
     <s-cnt-market-app [forApp]="getForApp()">
     </s-cnt-market-app>
 </main>
+<app-ng-cnt-market-footer></app-ng-cnt-market-footer>
 <s-cnt-market-back-to-top></s-cnt-market-back-to-top>
