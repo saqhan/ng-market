@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { header } from './mock';
+import { fakeAsync } from '@angular/core/testing';
 
 @Injectable({
   providedIn: 'root',
@@ -11,5 +12,3 @@ export class MarketStoreService {
 
   public numberHeader = header.numberHeader;
 
-
-}
