@@ -1,10 +1,10 @@
-<div *ngIf="firstPage" >
+<div *ngIf="this.firstPage" >
   <s-cnt-market-header-base
     [logo]="getLogo()"
     [number]="getNumberHeader()"
   ></s-cnt-market-header-base>
 </div>
-<div *ngIf="!firstPage">
+<div *ngIf="!this.firstPage">
   <div class="header-wrapper">
     <div class="container-fluid">
       <div class="row">
@@ -23,6 +23,4 @@
     </div>
   </div>
 </div>
-<div *ngIf="base">
-  123123
-</div>
+
