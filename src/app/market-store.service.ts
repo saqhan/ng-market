@@ -10,11 +10,19 @@ import {
   choiceTitleText,
   forSpecialist,
   forCourier,
-  forApp, forSelection,
+  forApp,
+  forSelection,
   homePageImage,
   homeText,
   homeSubText,
-  footerData
+  footerData,
+  promoSliderCards,
+  productsSliderCards,
+  productsSliderTitle,
+  productsList,
+  recentlyWatchedProducts,
+  recentlyWatchedTitle,
+  productModal,
 } from './mock';
 
 @Injectable({
@@ -26,7 +34,6 @@ export class MarketStoreService {
   public logo = header.body.logo;
 
   public numberHeader = header.numberHeader;
-
 
   public forOffer = forOffer;
 
@@ -54,7 +61,22 @@ export class MarketStoreService {
 
   public homeSubText = homeSubText;
 
+  /**
+   * Вторая страница
+   */
+  public promoSliderCards = promoSliderCards;
 
+  public productsSliderCards = productsSliderCards;
+
+  public productsSliderTitle = productsSliderTitle;
+
+  public productsList = productsList;
+
+  public recentlyWatchedProducts = recentlyWatchedProducts;
+
+  public recentlyWatchedTitle = recentlyWatchedTitle;
+
+  public productModal = productModal;
 
   //  сайхан
   //
@@ -107,5 +129,4 @@ export class MarketStoreService {
   getLeftMenuCatalog() {
     return header.leftMenuCatalog;
   }
-
 }
