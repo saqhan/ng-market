@@ -6,21 +6,22 @@
   <s-cnt-market-products-slider
     [productsSliderCards]="getProductsSliderCards()"
     [productsSliderTitle]="getProductsSliderTitle()"
-    (showModal)="showOrCloseModal()"
+    (showModal)="showOrCloseModal($event)"
   ></s-cnt-market-products-slider>
   <s-cnt-market-products-list
-    (showModal)="showOrCloseModal()"
+    (showModal)="showOrCloseModal($event)"
     [productsList]="getProductsList()"
   ></s-cnt-market-products-list>
   <s-cnt-market-recently-watched
-    (showModal)="showOrCloseModal()"
+    (showModal)="showOrCloseModal($event)"
     [recentlyWatchedProducts]="getRecentlyWatchedProducts()"
     [recentlyWatchedTitle]="getRecentlyWatchedTitle()"
   ></s-cnt-market-recently-watched>
   <s-cnt-market-modal-window
     *ngIf="showModalState"
     [productModal]="getProductModal()"
-    (clickOnModal)="showOrCloseModal()"
+    [productData]="getProductData()"
+    (clickOnModal)="showOrCloseModal($event)"
   ></s-cnt-market-modal-window>
   <s-cnt-market-back-to-top></s-cnt-market-back-to-top>
 </main>

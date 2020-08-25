@@ -11,7 +11,13 @@ export class NgCntMarketSecondPageComponent implements OnInit {
 
   public showModalState = false;
 
+  public productData;
+
   ngOnInit(): void {}
+
+  public getProductData() {
+    return this.productData;
+  }
 
   public getLogo() {
     return this.marketStore.logo;
@@ -48,9 +54,12 @@ export class NgCntMarketSecondPageComponent implements OnInit {
   /**
    * Открытие и закрытие модального окна
    */
-  public showOrCloseModal() {
+  public showOrCloseModal({detail}) {
     this.showModalState = !this.showModalState;
     this.bodyToggleScroll();
+    this.productData = {
+      ...detail
+    };
   }
 
   /**
