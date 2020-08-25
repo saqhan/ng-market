@@ -1,0 +1,28 @@
+<app-ng-cnt-market-header [firstPage]="false"></app-ng-cnt-market-header>
+<main>
+  <s-cnt-market-promo-slider
+    [promoSliderCards]="getPromoSliderCards()"
+  ></s-cnt-market-promo-slider>
+  <s-cnt-market-products-slider
+    [productsSliderCards]="getProductsSliderCards()"
+    [productsSliderTitle]="getProductsSliderTitle()"
+    (showModal)="showOrCloseModal($event)"
+  ></s-cnt-market-products-slider>
+  <s-cnt-market-products-list
+    (showModal)="showOrCloseModal($event)"
+    [productsList]="getProductsList()"
+  ></s-cnt-market-products-list>
+  <s-cnt-market-recently-watched
+    (showModal)="showOrCloseModal($event)"
+    [recentlyWatchedProducts]="getRecentlyWatchedProducts()"
+    [recentlyWatchedTitle]="getRecentlyWatchedTitle()"
+  ></s-cnt-market-recently-watched>
+  <s-cnt-market-modal-window
+    *ngIf="showModalState"
+    [productModal]="getProductModal()"
+    [productData]="getProductData()"
+    (clickOnModal)="showOrCloseModal($event)"
+  ></s-cnt-market-modal-window>
+  <s-cnt-market-back-to-top></s-cnt-market-back-to-top>
+</main>
+<app-ng-cnt-market-footer></app-ng-cnt-market-footer>

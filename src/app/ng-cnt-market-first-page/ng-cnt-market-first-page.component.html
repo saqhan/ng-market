@@ -1,0 +1,38 @@
+<app-ng-cnt-market-header [firstPage]="true" ></app-ng-cnt-market-header>
+<main>
+  <s-cnt-market-selection
+    [forSelection]="getForSelection()"
+    [homePageImage]="getHomePageImge()"
+    [homeText]="getHomeText()"
+    [homeSubText]="getHomeSubText()"
+  >
+  </s-cnt-market-selection>
+    <s-cnt-market-offer
+      [forOffer]="getForOffer()"
+      [offerTitleText]="getOfferTitleText()"
+    >
+    </s-cnt-market-offer>
+    <s-cnt-market-statistics
+      [forStatistics]="getForStatictics()"
+    >
+    </s-cnt-market-statistics>
+    <s-cnt-market-delivery
+      [delivery]="getDelivery()"
+    >
+    </s-cnt-market-delivery>
+    <s-cnt-market-choice
+      [forChoice]="getForChoice()"
+      [choiceTitleText]="getChoiceTitleText()"
+    >
+    </s-cnt-market-choice>
+    <s-cnt-market-specialist
+      [forSpecialist]="getForSpecialist()"
+    >
+    </s-cnt-market-specialist>
+    <s-cnt-market-courier [forCourier]="getForCourier()">
+    </s-cnt-market-courier>
+    <s-cnt-market-app [forApp]="getForApp()">
+    </s-cnt-market-app>
+</main>
+<app-ng-cnt-market-footer></app-ng-cnt-market-footer>
+<s-cnt-market-back-to-top></s-cnt-market-back-to-top>
